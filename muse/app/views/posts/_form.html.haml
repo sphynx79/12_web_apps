@@ -1,0 +1,13 @@
+= simple_form_for(@post, html: { multipart: true } ) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = f.input :image
+    = f.input :title
+    = f.input :link
+    = f.input :description
+
+  .form-actions
+    = f.button :submit
+
+

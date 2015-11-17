@@ -1,0 +1,13 @@
+ <div class="page-header", id="comment_header" >
+   <h1><%= link_to @comment.link.title, @comment.link %></h1>
+    <p class="lead"><%= @comment.body %></p>
+
+</div>
+
+<span>
+<%= time_ago_in_words(@comment.created_at) %> by <%= @comment.user.name %>
+   | <%= link_to 'Edit', edit_comment_path(@comment) %> |
+   <%= link_to "Delete", @comment , method: :delete, data: { confirm: "Are you sure your want to delete this status?"} %>
+</span>
+
+

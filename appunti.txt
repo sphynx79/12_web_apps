@@ -1,0 +1,28 @@
+00:31
+
+http://mackenziechild.me/12-in-12/
+
+
+da questo sito posso seguire anche come creare un 
+	- blog portfolio
+	- podcast network
+	- course platform
+
+
+To have launchd start elasticsearch at login:
+  ln -sfv /usr/local/opt/elasticsearch/*.plist ~/Library/LaunchAgents
+Then to load elasticsearch now:
+  launchctl load ~/Library/LaunchAgents/homebrew.mxcl.elasticsearch.plist
+Or, if you don't want/need launchctl, you can just run:
+  elasticsearch --config=/usr/local/opt/elasticsearch/config/elasticsearch.yml
+
+
+Simple form bootstrap:
+
+ Be sure to have a copy of the Bootstrap stylesheet available on your
+  application, you can get it on http://getbootstrap.com/.
+
+  Inside your views, use the 'simple_form_for' with one of the Bootstrap form
+  classes, '.form-horizontal' or '.form-inline', as the following:
+
+    = simple_form_for(@user, html: { class: 'form-horizontal' }) do |form|

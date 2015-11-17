@@ -1,0 +1,9 @@
+$('.vpos')
+  .on('ajax:send', function () { $(this).addClass('loading'); })
+  .on('ajax:complete', function () { $(this).removeClass('loading'); })
+  .on('ajax:error', function () { $(this).after('<div class="error">There was an issue.</div>'); })
+  .on('ajax:success', function (data) {$('.ncount-<%= @pin.id %>').html('<%=escape_javascript @pin.get_downvotes.size.to_s %>'); 
+  $('.vcount-<%= @pin.id %>').html('<%=escape_javascript @pin.get_upvotes.size.to_s %>');
+  });
+
+

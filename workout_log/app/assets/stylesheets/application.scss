@@ -1,0 +1,84 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+
+// "bootstrap-sprockets" must be imported before "bootstrap" and "bootstrap/variables"
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+#form_header {
+   margin-left: -15px;
+   margin-right: -15px;
+}
+
+html {
+   height: 100%;
+}
+
+body {
+/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0099ff+0,60abf8+48,00ccff+100 */
+background: #0099ff; /* Old browsers */
+background: -moz-linear-gradient(left,  #0099ff 0%, #60abf8 48%, #00ccff 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, right top, color-stop(0%,#0099ff), color-stop(48%,#60abf8), color-stop(100%,#00ccff)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(left,  #0099ff 0%,#60abf8 48%,#00ccff 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(left,  #0099ff 0%,#60abf8 48%,#00ccff 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(left,  #0099ff 0%,#60abf8 48%,#00ccff 100%); /* IE10+ */
+background: linear-gradient(to right,  #0099ff 0%,#60abf8 48%,#00ccff 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0099ff', endColorstr='#00ccff',GradientType=1 ); /* IE6-9 */
+  
+}
+
+.navbar-default {
+   background: #FF9900;
+   -webkit-box-shadow: 0 2px 2px 0 #575757;
+   box-shadow: 0 2px 2px 0 #575757;
+   border: none;
+   border-radius: 0px;
+
+   .navbar-header {
+      .navbar-brand {
+         color: white;
+         font-size: 20px;
+         text-transform: uppercase;
+         font-weight: 700;
+         letter-spacing: -1px;
+      }
+   }
+
+   .navbar-link {
+      line-height: 3.5;
+      color: #4B5090;
+   }
+}
+
+#index_workouts {
+   h2 {
+      margin-bottom: 0;
+      font-weight: 100;
+
+      a {
+         color: white;
+      }
+   }
+
+   h3 {
+      margin: 0;
+      font-size: 18px;
+
+      span {
+         color: #FFC107;
+      }
+   }
+}

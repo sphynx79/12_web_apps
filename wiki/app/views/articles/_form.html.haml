@@ -1,0 +1,11 @@
+= simple_form_for(@article) do |f|
+  = f.error_notification
+
+  .form-inputs
+    = content_tag :div, class: "form-group" do
+      = f.collection_select :category_id, Category.all, :id, :name, {prompt: "Chose a category"}, class: "form-control"
+    = f.input :title
+    = f.input :content
+
+  .form-actions
+    = f.button :submit

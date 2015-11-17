@@ -1,0 +1,24 @@
+
+<% @links.each do |link| %>
+<div class="link row clearfix">
+   <h2>
+      <%= link_to link.title, link %><br>
+      <small class="author">Submitted <%= time_ago_in_words(link.created_at) %> by <%= link.user.name %></small>
+   </h2>
+   <div class="btn-group">
+      <a class="btn btn-default btn-sm" href="<%= link.url %>">Visit Link</a>
+      <%= link_to like_link_path(link), method: :put, class: "vpos btn btn-default btn-sm", remote: true do %>
+      <div class="glyphicon glyphicon-chevron-up availability">
+         Upvote: <span class="vcount-<%= link.id %>"><%= link.get_upvotes.size %></span>
+      </div>
+      <% end %>
+      <%= link_to dislike_link_path(link), method: :put, class: "npos btn btn-default btn-sm", remote: true  do %>
+      <div class="glyphicon glyphicon-chevron-down availability">
+         Downvote: <span class="ncount-<%= link.id %>"><%= link.get_downvotes.size %></span>
+      </div>
+      <% end %>
+   </div>
+
+</div>
+<% end %>
+
